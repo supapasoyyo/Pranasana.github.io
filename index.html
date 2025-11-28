@@ -8,6 +8,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
+        // 1. CONFIGURA TU NÚMERO DE WHATSAPP AQUÍ (con código de país, sin '+' ni guiones)
+        // Ejemplo: 521234567890
+        const WHATSAPP_NUMBER = "573133610766"; 
+
+        // Mensaje predefinido para cuando el usuario haga clic en el botón de contacto
+        const WHATSAPP_MESSAGE = encodeURIComponent("¡Hola! Me gustaría reservar mi primera clase de yoga gratis en Pranasana Yoga. ¿Podrían darme más información?");
+
+        // URL completa de WhatsApp
+        const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+
         // Configuración de colores y fuentes para Tailwind CSS (PALETA AZUL AGUAMARINA)
         tailwind.config = {
             theme: {
@@ -44,8 +54,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
-                    <i class="fas fa-spa text-yoga-primary text-3xl mr-2"></i>
-                    <!-- Nombre actualizado: Pranasana Yoga -->
+                    <!-- INICIO CAMBIO DE LOGO: Usando logo1.jpg -->
+                    <img src="logo1.png" alt="Logo Pranasana Yoga" class="h-10 w-10 mr-2 object-contain rounded-full">
+                    <!-- FIN CAMBIO DE LOGO -->
                     <span class="font-serif text-2xl font-bold text-yoga-dark">Pranasana Yoga</span>
                 </div>
                 <div class="hidden md:block">
@@ -53,6 +64,7 @@
                         <a href="#inicio" class="hover:text-yoga-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Inicio</a>
                         <a href="#filosofia" class="hover:text-yoga-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Filosofía</a>
                         <a href="#clases" class="hover:text-yoga-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Clases</a>
+                        <!-- El botón de la barra de navegación también se dirige a WhatsApp -->
                         <a href="#contacto" class="bg-yoga-primary text-white px-6 py-2 rounded-full hover:bg-yoga-accent transition-all text-sm font-medium shadow-md hover:shadow-lg">Reserva tu clase</a>
                     </div>
                 </div>
@@ -98,8 +110,7 @@
                     <div class="relative mx-auto w-full rounded-2xl shadow-2xl lg:max-w-md overflow-hidden group">
                         <!-- Imagen de Hero -->
                         <img class="w-full object-cover transform transition duration-700 group-hover:scale-105" 
-                             src="foto1.png
-" 
+                             src="foto1.png" 
                              alt="Clase de yoga en grupo">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                     </div>
@@ -178,7 +189,7 @@
                      <div class="aspect-w-3 aspect-h-2 rounded-2xl shadow-2xl overflow-hidden">
                          <!-- Imagen de Clases -->
                          <img class="object-cover w-full h-full rounded-2xl" 
-                              src="foto3.png" 
+                              src="foto4.png" 
                               alt="Estudiantes practicando estiramientos">
                     </div>
                     <div class="mt-6 grid grid-cols-2 gap-4">
@@ -221,13 +232,13 @@
 
                          <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border-l-4 border-purple-400">
                             <div class="flex justify-between items-center mb-2">
-                                <h3 class="text-xl font-bold text-yoga-dark">Yoga Restaurativo</h3>
+                                <h3 class="text-xl font-bold text-yoga-dark">Yoga Restaurativo / Terapéutico</h3>
                                 <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Todos los niveles</span>
                             </div>
-                            <p class="text-gray-600 mb-4">Relajación profunda y estiramientos pasivos para recuperar el cuerpo.</p>
-                            <div class="flex items-center text-sm text-gray-500">
-                                <i class="far fa-clock mr-2"></i> Vie | 7:00 PM
-                            </div>
+                            <!-- INICIO CAMBIO: Horario suprimido -->
+                            <p class="text-gray-600 mb-4">Relajación profunda y estiramientos pasivos para recuperar el cuerpo. (Clases con cita previa).</p>
+                            <!-- FIN CAMBIO -->
+                            <!-- El div de horario ha sido eliminado de aquí -->
                         </div>
                     </div>
                 </div>
@@ -235,7 +246,7 @@
         </div>
     </section>
 
-    <!-- Contacto -->
+    <!-- Contacto (Simplificado a WhatsApp) -->
     <section id="contacto" class="py-16 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Contenedor con color Primario actualizado -->
@@ -244,35 +255,21 @@
                     <div class="text-center">
                         <h2 class="text-3xl font-extrabold text-white font-serif">Empieza tu viaje hoy con Pranasana</h2>
                         <p class="mt-4 text-lg text-white/90">
-                            La primera clase es cortesía de la casa. Ven a conocernos.
+                            La primera clase es cortesía de la casa. Haz clic abajo para contactarnos directamente por WhatsApp.
                         </p>
                     </div>
-                    <!-- El formulario es estático y solo muestra un mensaje de éxito -->
-                    <form class="mt-8 space-y-6" onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden');">
-                        <div class="rounded-md shadow-sm -space-y-px">
-                            <div>
-                                <label for="email-address" class="sr-only">Correo electrónico</label>
-                                <input id="email-address" name="email" type="email" required class="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-yoga-accent focus:border-yoga-accent focus:z-10 sm:text-sm" placeholder="Tu correo electrónico">
-                            </div>
-                            <div>
-                                <label for="name" class="sr-only">Nombre</label>
-                                <input id="name" name="name" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-yoga-accent focus:border-yoga-accent focus:z-10 sm:text-sm" placeholder="Tu nombre">
-                            </div>
-                        </div>
-
-                        <div>
-                            <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-yoga-primary bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yoga-accent transition-colors shadow-lg">
-                                <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-                                    <!-- Icono con color Primario actualizado -->
-                                    <i class="fas fa-paper-plane text-yoga-primary group-hover:text-yoga-accent"></i>
-                                </span>
-                                Reservar mi clase gratis
-                            </button>
-                        </div>
-                        <div id="success-msg" class="hidden text-center text-white bg-yoga-accent/80 p-2 rounded animate-pulse">
-                            ¡Gracias! Nos pondremos en contacto contigo pronto.
-                        </div>
-                    </form>
+                    <!-- INICIO CAMBIO: Enlace directo a WhatsApp en lugar del formulario -->
+                    <div class="mt-8">
+                        <a href="#" onclick="window.open(WHATSAPP_URL, '_blank'); return false;" 
+                           class="group relative w-full flex justify-center py-4 px-4 border border-transparent text-lg font-bold rounded-md text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 transition-colors shadow-lg shadow-green-500/50">
+                            <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                                <!-- Icono de WhatsApp -->
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </span>
+                            Contactar por WhatsApp y Reservar
+                        </a>
+                    </div>
+                    <!-- FIN CAMBIO -->
                 </div>
             </div>
         </div>
@@ -289,7 +286,8 @@
             <div class="flex space-x-6">
                 <a href="#" class="text-gray-400 hover:text-yoga-primary transition-colors"><i class="fab fa-instagram text-xl"></i></a>
                 <a href="#" class="text-gray-400 hover:text-yoga-primary transition-colors"><i class="fab fa-facebook text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-yoga-primary transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
+                <!-- Enlace de WhatsApp en el footer -->
+                <a href="#" onclick="window.open(WHATSAPP_URL, '_blank'); return false;" class="text-gray-400 hover:text-yoga-primary transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
             </div>
         </div>
         <div class="mt-8 text-center text-gray-500 text-xs">
