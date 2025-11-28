@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título principal de la página, nombre actualizado -->
+    <title>Pranasana Yoga - Tu Espacio de Calma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        // Configuración de colores y fuentes para Tailwind CSS (PALETA AZUL AGUAMARINA)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'yoga-primary': '#6DAEAC', // Azul Aguamarina Oscuro Suave (Acción/Botones)
+                        'yoga-secondary': '#F0F8F8', // Azul Pastel Muy Claro (Fondo)
+                        'yoga-accent': '#4C857E', // Azul Aguamarina Más Profundo (Acentos)
+                        'yoga-dark': '#2A3A3A', // Gris Azulado Oscuro (Texto y Footer)
+                    },
+                    fontFamily: {
+                        'sans': ['Helvetica Neue', 'sans-serif'],
+                        'serif': ['Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .hero-pattern {
+            background-color: #F0F8F8; /* Fondo Azul Claro */
+            /* Patrón de fondo sutil con color Primary actualizado */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%236DAEAC' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-yoga-secondary text-yoga-dark font-sans antialiased scroll-smooth">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <i class="fas fa-spa text-yoga-primary text-3xl mr-2"></i>
+                    <!-- Nombre actualizado: Pranasana Yoga -->
+                    <span class="font-serif text-2xl font-bold text-yoga-dark">Pranasana Yoga</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="hover:text-yoga-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Inicio</a>
+                        <a href="#filosofia" class="hover:text-yoga-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Filosofía</a>
+                        <a href="#clases" class="hover:text-yoga-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Clases</a>
+                        <a href="#contacto" class="bg-yoga-primary text-white px-6 py-2 rounded-full hover:bg-yoga-accent transition-all text-sm font-medium shadow-md hover:shadow-lg">Reserva tu clase</a>
+                    </div>
+                </div>
+                <!-- Botón móvil -->
+                <div class="-mr-2 flex md:hidden">
+                    <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md text-yoga-dark hover:text-yoga-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil -->
+        <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50">Inicio</a>
+                <a href="#filosofia" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50">Filosofía</a>
+                <a href="#clases" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50">Clases</a>
+                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-yoga-primary font-bold">Reservar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Inicio) -->
+    <section id="inicio" class="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden hero-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left flex flex-col justify-center">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-yoga-dark sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-serif">
+                        <span class="block">Encuentra tu equilibrio</span>
+                        <span class="block text-yoga-primary">en cada respiración</span>
+                    </h1>
+                    <p class="mt-3 text-base text-yoga-dark/80 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        Un espacio dedicado a armonizar cuerpo y mente. Descubre la paz interior a través de la práctica consciente del yoga en un ambiente acogedor.
+                    </p>
+                    <div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+                        <a href="#clases" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-yoga-primary hover:bg-yoga-accent md:py-4 md:text-lg transition-all transform hover:-translate-y-1">
+                            Ver horarios
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                    <div class="relative mx-auto w-full rounded-2xl shadow-2xl lg:max-w-md overflow-hidden group">
+                        <!-- Imagen de Hero -->
+                        <img class="w-full object-cover transform transition duration-700 group-hover:scale-105" 
+                             src="foto1.png
+" 
+                             alt="Clase de yoga en grupo">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios / Filosofía -->
+    <section id="filosofia" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base text-yoga-primary font-semibold tracking-wide uppercase">Nuestra Esencia Pranasana</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-yoga-dark sm:text-4xl font-serif">
+                    Más que ejercicio, un estilo de vida
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    Creemos en la práctica adaptada a cada cuerpo, respetando tus ritmos y ayudándote a progresar día a día.
+                </p>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Card 1 -->
+                <div class="pt-6">
+                    <div class="flow-root bg-yoga-secondary rounded-lg px-6 pb-8 h-full hover:shadow-lg transition-shadow duration-300">
+                        <div class="-mt-6">
+                            <div class="inline-flex items-center justify-center p-3 bg-yoga-primary rounded-md shadow-lg">
+                                <i class="fas fa-heart text-white text-2xl"></i>
+                            </div>
+                            <h3 class="mt-8 text-lg font-medium text-yoga-dark tracking-tight">Bienestar Integral</h3>
+                            <p class="mt-5 text-base text-gray-600">
+                                Enfocamos nuestras clases no solo en la flexibilidad física, sino en la salud emocional y la reducción del estrés.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="pt-6">
+                    <div class="flow-root bg-yoga-secondary rounded-lg px-6 pb-8 h-full hover:shadow-lg transition-shadow duration-300">
+                        <div class="-mt-6">
+                            <div class="inline-flex items-center justify-center p-3 bg-yoga-primary rounded-md shadow-lg">
+                                <i class="fas fa-users text-white text-2xl"></i>
+                            </div>
+                            <h3 class="mt-8 text-lg font-medium text-yoga-dark tracking-tight">Comunidad Unida</h3>
+                            <p class="mt-5 text-base text-gray-600">
+                                Grupos pequeños y atención personalizada. Aquí no eres un número, eres parte de nuestra familia yóguica.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="pt-6">
+                    <div class="flow-root bg-yoga-secondary rounded-lg px-6 pb-8 h-full hover:shadow-lg transition-shadow duration-300">
+                        <div class="-mt-6">
+                            <div class="inline-flex items-center justify-center p-3 bg-yoga-primary rounded-md shadow-lg">
+                                <i class="fas fa-leaf text-white text-2xl"></i>
+                            </div>
+                            <h3 class="mt-8 text-lg font-medium text-yoga-dark tracking-tight">Entorno Armónico</h3>
+                            <p class="mt-5 text-base text-gray-600">
+                                Un espacio limpio, ordenado y diseñado para desconectar del ruido exterior y reconectar contigo mismo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería y Clases -->
+    <section id="clases" class="py-16 bg-yoga-secondary/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="relative">
+                     <div class="aspect-w-3 aspect-h-2 rounded-2xl shadow-2xl overflow-hidden">
+                         <!-- Imagen de Clases -->
+                         <img class="object-cover w-full h-full rounded-2xl" 
+                              src="foto3.png" 
+                              alt="Estudiantes practicando estiramientos">
+                    </div>
+                    <div class="mt-6 grid grid-cols-2 gap-4">
+                         <div class="bg-white p-4 rounded-xl shadow-sm text-center">
+                             <span class="block text-3xl font-bold text-yoga-primary">10+</span>
+                             <span class="text-sm text-gray-500">Años de experiencia</span>
+                         </div>
+                         <div class="bg-white p-4 rounded-xl shadow-sm text-center">
+                             <span class="block text-3xl font-bold text-yoga-primary">500+</span>
+                             <span class="text-sm text-gray-500">Alumnos felices</span>
+                         </div>
+                    </div>
+                </div>
+                <div class="mt-10 lg:mt-0">
+                    <h2 class="text-3xl font-extrabold text-yoga-dark sm:text-4xl font-serif mb-6">
+                        Nuestras Clases Pranasana
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border-l-4 border-yoga-primary">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-bold text-yoga-dark">Hatha Yoga</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Principiantes</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Fundamentos, posturas básicas y respiración. Ideal para iniciar tu camino.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="far fa-clock mr-2"></i> **Mar y Jue | 5:30 PM**
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border-l-4 border-yoga-accent">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-bold text-yoga-dark">Vinyasa Flow</h3>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Intermedio</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Movimiento fluido sincronizado con la respiración. Energía y dinamismo.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="far fa-clock mr-2"></i> **Mie y Sáb | 7:00 AM**
+                            </div>
+                        </div>
+
+                         <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all border-l-4 border-purple-400">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-xl font-bold text-yoga-dark">Yoga Restaurativo</h3>
+                                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Todos los niveles</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Relajación profunda y estiramientos pasivos para recuperar el cuerpo.</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="far fa-clock mr-2"></i> Vie | 7:00 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Contenedor con color Primario actualizado -->
+            <div class="bg-yoga-primary rounded-2xl shadow-xl overflow-hidden">
+                <div class="px-6 py-12 sm:px-12">
+                    <div class="text-center">
+                        <h2 class="text-3xl font-extrabold text-white font-serif">Empieza tu viaje hoy con Pranasana</h2>
+                        <p class="mt-4 text-lg text-white/90">
+                            La primera clase es cortesía de la casa. Ven a conocernos.
+                        </p>
+                    </div>
+                    <!-- El formulario es estático y solo muestra un mensaje de éxito -->
+                    <form class="mt-8 space-y-6" onsubmit="event.preventDefault(); document.getElementById('success-msg').classList.remove('hidden');">
+                        <div class="rounded-md shadow-sm -space-y-px">
+                            <div>
+                                <label for="email-address" class="sr-only">Correo electrónico</label>
+                                <input id="email-address" name="email" type="email" required class="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-yoga-accent focus:border-yoga-accent focus:z-10 sm:text-sm" placeholder="Tu correo electrónico">
+                            </div>
+                            <div>
+                                <label for="name" class="sr-only">Nombre</label>
+                                <input id="name" name="name" type="text" required class="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-yoga-accent focus:border-yoga-accent focus:z-10 sm:text-sm" placeholder="Tu nombre">
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-yoga-primary bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yoga-accent transition-colors shadow-lg">
+                                <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                                    <!-- Icono con color Primario actualizado -->
+                                    <i class="fas fa-paper-plane text-yoga-primary group-hover:text-yoga-accent"></i>
+                                </span>
+                                Reservar mi clase gratis
+                            </button>
+                        </div>
+                        <div id="success-msg" class="hidden text-center text-white bg-yoga-accent/80 p-2 rounded animate-pulse">
+                            ¡Gracias! Nos pondremos en contacto contigo pronto.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-yoga-dark text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <!-- Nombre actualizado: Pranasana Yoga -->
+                <span class="text-2xl font-serif font-bold">Pranasana Yoga</span>
+                <p class="text-gray-400 text-sm mt-1">Tu refugio de paz en la ciudad.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-yoga-primary transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-yoga-primary transition-colors"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-yoga-primary transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
+            </div>
+        </div>
+        <div class="mt-8 text-center text-gray-500 text-xs">
+            &copy; 2025 Pranasana Yoga. Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
